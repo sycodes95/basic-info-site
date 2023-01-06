@@ -1,3 +1,26 @@
+const express = require('express')
+const app = express()
+
+
+app.set('view engine', 'ejs')
+
+app.get('/', (req, res) =>{
+  res.render('index')
+})
+app.get('/about', (req, res) =>{
+  res.render('about')
+})
+app.get('/contact-me', (req, res) =>{
+  res.render('contact-me')
+})
+app.get('/404', (req, res) =>{
+  res.render('404')
+})
+
+
+app.listen(3000)
+
+/*
 const http = require('http');
 const fs = require('fs');
 const port = 8080;
@@ -38,3 +61,4 @@ server.listen(port, (err) => {
   }
   console.log(`server is listening on ${port}`);
 });
+*/
